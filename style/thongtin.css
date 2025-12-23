@@ -1,0 +1,92 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fff0f5;
+}
+
+h1 {
+    color: #ff4d88;
+    margin-top: 20px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 2px solid #ff7aa2;
+    border-radius: 50px;
+    padding: 5px 10px;
+    background: white;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+/* Header styles */
+/*nay*/
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ff4d88;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.menu a:hover {
+    color: #b30059;
+}
+
+/*nay*/
+.list-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    background: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.item-info {
+    text-align: left;
+}
+
+.price {
+    color: #ff4d88;
+    font-weight: bold;
+}

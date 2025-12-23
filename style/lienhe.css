@@ -1,0 +1,86 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #fff0f5;
+}
+
+h1 {
+    color: #ff4d88;
+    margin-top: 20px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 2px solid #ff7aa2;
+    border-radius: 50px;
+    padding: 5px 10px;
+    background: white;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+/* Header styles */
+/*nay*/
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ff4d88;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.menu a:hover {
+    color: #b30059;
+}
+
+/*nay*/
+.friend-list {
+    display: grid;
+    grid-template-columns: repeat(3, 220px);
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.friend-box {
+    text-align: center;
+}
+
+.friend-box img {
+    width: 220px;
+    height: 220px;
+    border-radius: 15px; /* bo góc giống box sản phẩm */
+    object-fit: cover;
+}
+
+.friend-box p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff4d88;
+    font-size: 18px;
+}
+

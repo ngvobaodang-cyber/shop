@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin</title>
+    <link rel="stylesheet" href="style/thongtin.css">
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/logobao.png" alt="Logo Gấu Bông" width="150" height="150">
+        <h1> CHEETAH</h1> &nbsp;&nbsp;&nbsp;
+        <div class="search-box">
+            <input type="text" placeholder="Nhập sản phẩm cần tìm">
+        </div> &nbsp;&nbsp;&nbsp;
+        <img src="img/giohang.png" alt="Giỏ Hàng" width="50" height="50" onclick="location.href='giohang.html'">
+    </div>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="gaubong.html">Gấu Bông</a></li>
+            <li><a href="phukien.html"> Phụ Kiện </a></li>
+            <li><a href="thongtin.html"> Thông Tin </a></li>
+            <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="product-detail">
+            <img id="product-img" width="300px">
+
+            <div class="detail-info">
+                <h2 id="name"></h2>
+                <p id="price"></p>
+                <p id="desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = {
+            1: {
+                name: "Gấu bông Capybara",
+                price: "299.000đ",
+                img: "img/capybara.jpg",
+                desc: "Gấu bông Capybara mềm mại, đáng yêu, phù hợp làm quà tặng."
+            },
+            2: {
+                name: "Gấu bông Kuromi",
+                price: "349.000đ",
+                img: "img/Gấu bông Kuromi Night Series Limited Official.jpg",
+                desc: "Kuromi phiên bản giới hạn, phong cách dễ thương."
+            },
+            3: {
+                name: "Gấu bông Trắng",
+                price: "199.000đ",
+                img: "img/gautrang.webp",
+                desc: "Gấu trắng mềm mại, an toàn cho trẻ em."
+            }
+        };
+
+        // Lấy ID sản phẩm từ URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const product = products[id];
+
+        // Hiển thị sản phẩm
+        if (product) {
+            document.getElementById("product-img").src = product.img;
+            document.getElementById("product-name").innerText = product.name;
+            document.getElementById("product-price").innerText = "Giá: " + product.price;
+            document.getElementById("product-desc").innerText = product.desc;
+        }
+    </script>
+    <div class="container">
+
+        <h2>Danh sách sản phẩm</h2>
+
+        <div class="list-product">
+
+            <div class="item">
+                <img src="img/capybara.jpg">
+                <div class="item-info">
+                    <h3>Capybara</h3>
+                    <p class="price">299.000đ</p>
+                    <p>Gấu Bông Chuột Capybara Hafuto chảy nước mũi đáng yêu, quà tặng đồ chơi cho bạn gái</p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/Gấu bông Kuromi Night Series Limited Official.jpg">
+                <div class="item-info">
+                    <h3>Kuromi Night Series</h3>
+                    <p class="price">349.000đ</p>
+                    <p>Gấu bông Kuromi Night Series Limited Official</p>
+                    <p>Phiên bản official Limited </p>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="img/gautrang.webp">
+                <div class="item-info">
+                    <h3>Gấu Trắng</h3>
+                    <p class="price">199.000đ</p>
+                    <p>Gấu Bông We Bare Bear Ice Bear nằm đeo kính sẽ là món quà tặng vô cùng Dễ Thương dành cho người thân yêu của bạn!</p>
+                    <p>Hình ảnh Gấu Bông We Bare Bear Ice Bear nằm đeo kính, hình ảnh này là hình THẬT do Shop TỰ CHỤP.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
